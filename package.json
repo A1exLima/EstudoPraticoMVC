@@ -1,0 +1,18 @@
+{
+  "name": "estudopraticomvc",
+  "version": "1.0.0",
+  "description": "Projeto para estudo pratico aplicação sistema MVC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Lima",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
