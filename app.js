@@ -21,4 +21,4 @@ app.use('/', indexRouter);
 //...................................
 
 ///5. Configurando porta para inicializacao do servidor (Running 3000)
-app.listen(3000, ()=>console.log('Server running on port 3000'))
+app.listen(3000, ()=>console.log('Server running\º \n"" on port \t \n\ \"\ 3000'))
