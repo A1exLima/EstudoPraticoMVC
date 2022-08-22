@@ -46,11 +46,11 @@ header{
 /* Responsabilidade Header*/
 
 @media(min-width:870px){
-    
+
     .logo {
         width: 144px;
         height: 32px;
-        margin: 18px 0px 23px 123px;
+        margin: 18px 0px 23px 145px;
     }
 
 
