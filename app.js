@@ -14,8 +14,14 @@ app.set("view engine", 'ejs');
 app.use(express.static("public"));
 
 // Bloco para uso de Rotas do projeto (Requisicao Roteador e Indicacao Caminho)
+
+// Router Index
 var indexRouter = require('./routers/indexRouter');
 app.use('/', indexRouter);
+
+// Router Contato
+var contatoRouter = require('./routers/contatoRouter');
+app.use('/contato', contatoRouter);
 
 
 //...................................
