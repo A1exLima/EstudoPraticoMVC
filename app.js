@@ -13,15 +13,36 @@ app.set("view engine", 'ejs');
 // 4. Configurando para uso como pasta estatica a public
 app.use(express.static("public"));
 
+// Receberá as informaçes do formulário e deixara disponivel como um objeto literal
+//Isso fará com que o processamento das informacoes enviadas via formulário pelo método 
+//post funcione dentro de um objeto literal, assim dando a possibilidade de trabalhar com 
+//esses dados, caso nao possua essas duas linhas de código nao ira funcionar.
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
+
 // Bloco para uso de Rotas do projeto (Requisicao Roteador e Indicacao Caminho)
 
 // Router Index
-var indexRouter = require('./routers/indexRouter');
+const indexRouter = require('./routers/indexRouter');
 app.use('/', indexRouter);
+
+// Router Sobre
+var sobreRouter = require('./routers/sobreRouter');
+app.use('/sobre', sobreRouter);
+
+// Router Servicos
+var servicosRouter = require('./routers/servicosRouter');
+app.use('/servicos', servicosRouter);
+
+// Router Depoimentos
+var depoimentosRouter = require('./routers/depoimentosRouter');
+app.use('/depoimentos', depoimentosRouter);
 
 // Router Contato
 var contatoRouter = require('./routers/contatoRouter');
 app.use('/contato', contatoRouter);
+
+
 
 
 //...................................

@@ -1,15 +1,11 @@
 // Criacao objeto Literal para armazenar as funcoes de controller de cada endereco indicado
 // pelo roteador para controle.
 
-const IndexController = {
+const ServicosController = {
 
     index: (req, res)=>{
-        res.render('index');
-    },
-
-    search: (req, res)=>{
-        res.send(req.query);
+        res.render('servicos');
     }
+    
 }
-
-module.exports = IndexController;
+module.exports = ServicosController;

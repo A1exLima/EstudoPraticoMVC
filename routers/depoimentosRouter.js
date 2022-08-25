@@ -5,12 +5,8 @@ var express = require('express');
 var router = express.Router();
 
 // Bloco para uso de Rotas do projeto (Requisicao Controller e Indicacao Caminho)
-var IndexController = require('../controllers/IndexController');
-router.get('/', IndexController.index);
-
-router.get('/search', IndexController.search);
-
-
+var DepoimentosController = require('../controllers/DepoimentosController');
+router.get('/', DepoimentosController.index);
 
 //...................................
 

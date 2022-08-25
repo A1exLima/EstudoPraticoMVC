@@ -1,17 +1,22 @@
 <header>
     <a class="logo" href="/"><img src="/images/logo.svg" alt="logo beauty salon"></a>
         <nav>
-            <form action="/" method="get">
-
+            <form action="/search" method="get">
+                
+                Buscar: <input type="text" name="find" placeholder="O que você está procurando?">
+                <button type="submit">
+                    <img src="/images/lupa.svg" alt="Pesquisar">
+                </button>
+                
             </form>
         </nav>
         <nav>
             <img class="menu_hamburguer" src="/images/hamburguer.svg" alt="menu hamburguer">
             <ul class="menu_trad" >
-                <li><a href="/"> Início </a></li>
-                <li>Sobre</li>
-                <li>Serviços</li>
-                <li>Depoimentos</li>
+                <li> <a href="/"> Início </a> </li>
+                <li> <a href="/sobre"> Sobre </a> </li>
+                <li> <a href="/servicos"> Serviços </a> </li>
+                <li> <a href="/depoimentos"> Depoimentos </a> </li>
                 <li><a href="/contato"> Contato</a></li>
             </ul>
         </nav>
