@@ -41,10 +41,6 @@ app.use('/depoimentos', depoimentosRouter);
 // Router Contato
 var contatoRouter = require('./routers/contatoRouter');
 app.use('/contato', contatoRouter);
-
-
-
-
 //...................................
 
 ///5. Configurando porta para inicializacao do servidor (Running 3000)

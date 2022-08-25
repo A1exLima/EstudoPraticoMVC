@@ -1,0 +1,54 @@
+/* ---------CSS FOOTER---------*/
+
+footer{
+    height: 294px;
+    background-color: #69B99D;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.logo-footer {
+    margin: 64px 0px 24px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.marca-footer{
+    color: #F9F9F9;
+    font-size: 1rem;
+    margin: 0px auto 12px 24px;
+}
+
+.direitos-footer {
+    color: #F9F9F9;
+    font-size: 1rem;
+    margin: 0px auto 34px 24px;
+}
+
+.redes-sociais-footer{
+    margin: 0px auto 34px 24px;
+    display: flex;
+    align-items: center;
+}
+.redes-sociais-footer a{
+    width: 25px;
+    height: 25px;
+    margin: 0px 35px 0px 0px;
+}
+
+/* Responsabilidade Header*/
+
+@media(min-width:870px){
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 123px; 
+    }
+
+    .redes-sociais-footer{
+        margin: 0;
+    }
+}
+/* ---------CSS FOOTER---------*/
