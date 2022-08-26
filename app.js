@@ -15,10 +15,16 @@ app.use(express.static("public"));
 
 // Receberá as informaçes do formulário e deixara disponivel como um objeto literal
 //Isso fará com que o processamento das informacoes enviadas via formulário pelo método 
-//post funcione dentro de um objeto literal, assim dando a possibilidade de trabalhar com 
+//POST funcione dentro de um objeto literal, assim dando a possibilidade de trabalhar com 
 //esses dados, caso nao possua essas duas linhas de código nao ira funcionar.
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
+
+//Os métodos CRUD, PUT e DELETE nao sao suportados nativamente por todos os navegadores
+//As duas linhas de código abaixo chama o módulo para substituir o metodo POST por PUT ou DELETE,
+// nos formulários, fazendo com que consigamos trabalhar com métodos citados.
+var methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 // Bloco para uso de Rotas do projeto (Requisicao Roteador e Indicacao Caminho)
 
@@ -42,6 +48,12 @@ app.use('/depoimentos', depoimentosRouter);
 var contatoRouter = require('./routers/contatoRouter');
 app.use('/contato', contatoRouter);
 //...................................
+
+// Caso não seja encontrado nenhuma das páginas acima, aplicar
+//redirecionamento para erro 404
+app.use((req, res, next) => {
+    res.status(404).render('not-found');
+});
 
 ///5. Configurando porta para inicializacao do servidor (Running 3000)
 app.listen(3000, ()=>console.log('Server running on port 3000'))
