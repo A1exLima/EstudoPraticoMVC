@@ -41,6 +41,11 @@ header{
 .menu_trad {
     display: none;
 }
+
+form{
+    width: 300px;
+    background-color: #69B99D;
+}
  /*---------------------- */ 
 
 /* Responsabilidade Header*/

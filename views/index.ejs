@@ -2,11 +2,43 @@
 
 <body>
     <%- include('./partials/header') %>
+
+        <link rel="stylesheet" href="/stylesheets/index.css">
+
+        <main>
+            <% for( let pizzas of dataBasePizzas) { %>
+         
+                <article class="bloco-pizzas">
     
-    <section>
-       <p>Página Home</p>
-    </section>
+                    <img src="<%=pizzas.img%>" alt="<%=pizzas.nome%>">
     
+                    <section class ="bloco-dados">
+                        
+                        <section class = dados-pizza>
+    
+                            <div> Pizza de <%=pizzas.nome%></div>
+        
+                            <% let pizzasPreco = pizzas.preco.toString().replace(".", ","); %>
+        
+                            <div>R$<%=pizzasPreco%></div>
+                        
+                        </section>
+                        
+                        <section class = interacao-pizza>
+        
+                            <a href="/pizzas/<%=pizzas.id%>">Ver Mais</a>
+        
+                            <button>+ Adicionar</button>
+        
+                        </section>
+    
+                    </section>
+                    
+                </article>
+    
+            <% } %>
+        </main>
+
     <%- include('./partials/footer') %>
 </body>
 </html>
